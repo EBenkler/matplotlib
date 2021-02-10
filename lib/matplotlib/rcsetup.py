@@ -314,9 +314,8 @@ def _validate_toolbar(s):
     s = ValidateInStrings(
         'toolbar', ['None', 'toolbar2', 'toolmanager'], ignorecase=True)(s)
     if s == 'toolmanager':
-        cbook._warn_external(
-            "Treat the Tool classes introduced in v1.5 as experimental "
-            "for now, the API and rcParam may change in future versions.")
+        _api.warn_external("The new Tool classes introduced in "
+                           "v1.5 are experimental")
     return s
 
 
